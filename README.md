@@ -13,6 +13,7 @@
 |   └── index.html
 ├── src/
 |   └── App.js
+├── server.js
 └── webpack.config.js
 
 </pre>
