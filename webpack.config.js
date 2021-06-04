@@ -10,7 +10,10 @@ module.exports = {
     path: join(__dirname, "dist"),
     filename: "build.js",
   },
-  //   devtool: "eval-cheap-module-source-map", // for debuggin
+  devtool: "eval-cheap-module-source-map", // for debuggin
+  devServer: {
+    contentBase: join(__dirname, "dist"),
+  },
   module: {
     rules: [
       {
@@ -24,18 +27,9 @@ module.exports = {
         },
       },
       {
-        test: /\.styl$/,
+        test: /\.css$/,
         exclude: /node_modules/,
-        use: [
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: {
-              importLoaders: 2,
-            },
-          },
-          "stylus-loader",
-        ],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
