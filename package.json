@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile-dev": "webpack -d",
-    "compile-prod": "webpack -p"
+    "compile": "webpack",
+    "server": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,11 +16,17 @@
     "@babel/preset-env": "^7.14.4",
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
-    "brotli-gzip-webpack-plugin": "^0.5.0",
     "css-loader": "^5.2.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "style-loader": "^2.0.0",
-    "stylus-loader": "^6.0.0"
+    "stylus-loader": "^6.0.0",
+    "webpack-cli": "^4.7.0"
+  },
+  "dependencies": {
+    "@gfx/zopfli": "^1.0.15",
+    "compression-webpack-plugin": "^8.0.0",
+    "express": "^4.17.1",
+    "webpack": "^5.38.1"
   }
 }
