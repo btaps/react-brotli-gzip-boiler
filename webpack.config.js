@@ -5,7 +5,7 @@ const zlib = require("zlib");
 module.exports = {
   mode: "development",
   //   mode: "production",
-  entry: ["@babel/polyfill", join(__dirname, "src", "App.js")],
+  entry: ["@babel/polyfill", join(__dirname, "src", "index.js")],
   output: {
     path: join(__dirname, "dist"),
     filename: "build.js",
